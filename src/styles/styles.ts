@@ -1,10 +1,10 @@
-import { darkStyles } from './darkStyles.js';
-import { Styles } from '../shared/types.js';
+import { darkStyles } from './darkStyles.js'
+import { Styles } from '../shared/types.js'
 
 const styles: Styles = {
   body: {
     boxSizing: 'border-box',
-    background: 'rgb(255, 255, 255)',
+    background: '#e9e9f5',
   },
   rbgcpControlBtn: {
     paddingLeft: '8px',
@@ -177,8 +177,8 @@ const styles: Styles = {
   },
   rbgcpComparibleLabel: {
     color: '#323136',
-  }
-};
+  },
+}
 
 export const getStyles = (isDarkMode: boolean, passedStyles: Styles) => {
   const mergedStyles = { ...styles }
@@ -210,15 +210,21 @@ export const getStyles = (isDarkMode: boolean, passedStyles: Styles) => {
   return mergedStyles
 }
 
-export const colorTypeBtnStyles = (selected: boolean, styles: Styles): React.CSSProperties => {
+export const colorTypeBtnStyles = (
+  selected: boolean,
+  styles: Styles
+): React.CSSProperties => {
   if (selected) {
-    return {...styles.rbgcpControlBtn, ...styles.rbgcpControlBtnSelected}
+    return { ...styles.rbgcpControlBtn, ...styles.rbgcpControlBtnSelected }
   } else {
     return { ...styles.rbgcpControlBtn }
   }
 }
 
-export const controlBtnStyles = (selected: boolean, styles: Styles): React.CSSProperties => {
+export const controlBtnStyles = (
+  selected: boolean,
+  styles: Styles
+): React.CSSProperties => {
   if (selected) {
     return { ...styles.rbgcpControlIconBtn, ...styles.rbgcpControlBtnSelected }
   } else {
@@ -226,9 +232,16 @@ export const controlBtnStyles = (selected: boolean, styles: Styles): React.CSSPr
   }
 }
 
-export const modalBtnStyles = (selected: boolean, styles: Styles): React.CSSProperties => {
+export const modalBtnStyles = (
+  selected: boolean,
+  styles: Styles
+): React.CSSProperties => {
   if (selected) {
-    return { ...styles.rbgcpControlBtn, ...styles.rbgcpColorModelDropdownBtn, ...styles.rbgcpControlBtnSelected }
+    return {
+      ...styles.rbgcpControlBtn,
+      ...styles.rbgcpColorModelDropdownBtn,
+      ...styles.rbgcpControlBtnSelected,
+    }
   } else {
     return { ...styles.rbgcpControlBtn, ...styles.rbgcpColorModelDropdownBtn }
   }

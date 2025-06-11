@@ -8,7 +8,11 @@ import AdvancedControls from './AdvancedControls.js'
 import ComparibleColors from './ComparibleColors.js'
 import GradientControls from './GradientControls.js'
 import { LocalesProps } from '../shared/types.js'
-import { colorTypeBtnStyles, controlBtnStyles, modalBtnStyles } from '../styles/styles.js'
+import {
+  colorTypeBtnStyles,
+  controlBtnStyles,
+  modalBtnStyles,
+} from '../styles/styles.js'
 
 const ColorTypeBtns = ({
   hideColorTypeBtns,
@@ -151,8 +155,15 @@ const Controls = ({
   hideGradientAngle?: boolean
   hideGradientStop?: boolean
 }) => {
-  const { config, onChange, isGradient, handleChange, previous, defaultStyles, pickerIdSuffix } =
-    usePicker()
+  const {
+    config,
+    onChange,
+    isGradient,
+    handleChange,
+    previous,
+    defaultStyles,
+    pickerIdSuffix,
+  } = usePicker()
   const { defaultColor, defaultGradient } = config
   const [openComparibles, setOpenComparibles] = useState(false)
   const [openInputType, setOpenInputType] = useState(false)
@@ -190,7 +201,7 @@ const Controls = ({
     }
   } else {
     return (
-      <div style={{ paddingBottom: 4 }}>
+      <div style={{ marginTop: '1rem' }}>
         <div
           style={{
             width: '100%',
@@ -274,4 +285,4 @@ const Controls = ({
   }
 }
 
-export default Controls;
+export default Controls

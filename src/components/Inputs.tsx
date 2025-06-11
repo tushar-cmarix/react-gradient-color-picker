@@ -95,7 +95,9 @@ const HexInput = ({
     }
   }
 
-  const displayValue = showHexAlpha ? `${newHex}${getHexAlpha(opacity)}` : newHex
+  const displayValue = showHexAlpha
+    ? `${newHex}${getHexAlpha(opacity)}`
+    : newHex
   const label = showHexAlpha ? 'HEXA' : 'HEX'
   const width = showHexAlpha ? 88 : 76
 
@@ -361,7 +363,7 @@ const Inputs = () => {
     <div
       style={{
         columnGap: 6,
-        paddingTop: 14,
+        margin: '1rem 0',
         display: 'flex',
         justifyContent: 'space-between',
         ...defaultStyles.rbgcpInputsWrap,

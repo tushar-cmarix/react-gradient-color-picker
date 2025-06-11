@@ -29,10 +29,13 @@ const Picker = ({
   hideGradientControls,
 }: PickerProps) => {
   const { isGradient, pickerIdSuffix } = usePicker()
-
+  console.log('Using forked module123')
   return (
-    <div style={{ userSelect: 'none' }} id={`rbgcp-color-picker${pickerIdSuffix}`}>
-      {!hidePickerSquare && <Square />}
+    <div
+      style={{ userSelect: 'none' }}
+      id={`rbgcp-color-picker${pickerIdSuffix}`}
+    >
+      {!hidePresets && <Presets presets={presets} />}
       {!hideControls && (
         <Controls
           locales={locales}
@@ -48,10 +51,10 @@ const Picker = ({
         />
       )}
       {isGradient && <GradientBar />}
-      {!hideHue && <Hue />}
       {!hideOpacity && <Opacity />}
+      {!hideHue && <Hue />}
       {!hideInputs && <Inputs />}
-      {!hidePresets && <Presets presets={presets} />}
+      {!hidePickerSquare && <Square />}
     </div>
   )
 }
