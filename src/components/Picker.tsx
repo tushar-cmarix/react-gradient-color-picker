@@ -29,7 +29,7 @@ const Picker = ({
   hideGradientControls,
 }: PickerProps) => {
   const { isGradient, pickerIdSuffix } = usePicker()
-  console.log('Using forked module123')
+
   return (
     <div
       style={{ userSelect: 'none' }}

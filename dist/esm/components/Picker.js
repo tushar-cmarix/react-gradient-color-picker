@@ -10,7 +10,6 @@ import GradientBar from './GradientBar.js';
 var Picker = function (_a) {
     var locales = _a.locales, presets = _a.presets, hideHue = _a.hideHue, hideInputs = _a.hideInputs, hidePresets = _a.hidePresets, hideOpacity = _a.hideOpacity, hideEyeDrop = _a.hideEyeDrop, hideControls = _a.hideControls, hideInputType = _a.hideInputType, hideColorGuide = _a.hideColorGuide, hidePickerSquare = _a.hidePickerSquare, hideGradientType = _a.hideGradientType, hideGradientStop = _a.hideGradientStop, hideGradientAngle = _a.hideGradientAngle, hideColorTypeBtns = _a.hideColorTypeBtns, hideAdvancedSliders = _a.hideAdvancedSliders, hideGradientControls = _a.hideGradientControls;
     var _b = usePicker(), isGradient = _b.isGradient, pickerIdSuffix = _b.pickerIdSuffix;
-    console.log('Using forked module123');
     return (React.createElement("div", { style: { userSelect: 'none' }, id: "rbgcp-color-picker".concat(pickerIdSuffix) },
         !hidePresets && React.createElement(Presets, { presets: presets }),
         !hideControls && (React.createElement(Controls, { locales: locales, hideEyeDrop: hideEyeDrop, hideInputType: hideInputType, hideColorGuide: hideColorGuide, hideGradientType: hideGradientType, hideGradientStop: hideGradientStop, hideColorTypeBtns: hideColorTypeBtns, hideGradientAngle: hideGradientAngle, hideAdvancedSliders: hideAdvancedSliders, hideGradientControls: hideGradientControls })),

@@ -16,7 +16,7 @@ var darkStyles_js_1 = require("./darkStyles.js");
 var styles = {
     body: {
         boxSizing: 'border-box',
-        background: 'rgb(255, 255, 255)',
+        background: '#e9e9f5',
     },
     rbgcpControlBtn: {
         paddingLeft: '8px',
@@ -173,7 +173,7 @@ var styles = {
     },
     rbgcpComparibleLabel: {
         color: '#323136',
-    }
+    },
 };
 var getStyles = function (isDarkMode, passedStyles) {
     var mergedStyles = __assign({}, styles);
